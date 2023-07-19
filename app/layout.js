@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Écrivain.io",
   description: "Le blog communautaire des aficionados de l'écriture des romans.",
-  keywords: "blog des romanciers, roman, romancier, écrire un roman, lire un roman"
+  keywords: "blog des romanciers, roman, romancier, écrire un roman, lire un roman",
+  author: "Charles-Henri SAINT-MARS"
 };
 
 export default function RootLayout({ children }) {
