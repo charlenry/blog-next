@@ -1,95 +1,45 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Inter } from "next/font/google";
+import Link from "next/link";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
+    <>
+      <div className="container px-4 pt-5">
+        <h1 className="text-center">Bienvenue sur Écrivain.io</h1>
+        <p className="text-center fs-4">
+          {"Le blog communautaire des aficionados de l'écriture des romans."}
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+        <div className="row mt-5 gy-3">
+          <div className="col-12 col-sm-6" style={{minHeight: "200px"}}>
+            <div className="card w-100 h-100">
+              <div className="card-body">
+                <h5 className="card-title">Lisez les articles</h5>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  Maximisez votre culture des romans
+                </h6>
+                <p>Chaque auteur tente de vous apporter le plus de valeur possible par article</p>
+                <Link href="/blog">Visitez le blog</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-6" style={{minHeight: "200px"}}>
+            <div className="card w-100 h-100">
+              <div className="card-body">
+                <h5 className="card-title">Faites un tour vers la liste de membres</h5>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  Rencontrez des romanciers
+                </h6>
+                <p>Ajouter, invitez et discutez avec les différents membres</p>
+                <Link href="/users">Découvrez la liste de membres</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }
