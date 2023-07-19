@@ -9,7 +9,10 @@ export const metadata = {
   title: "Écrivain.io",
   description: "Le blog communautaire des aficionados de l'écriture des romans.",
   keywords: "blog des romanciers, roman, romancier, écrire un roman, lire un roman",
-  author: "Charles-Henri SAINT-MARS"
+  generator: "Next.js",
+  applicationName: 'Blog-Next',
+  creator: "Charles-Henri SAINT-MARS",
+  publisher: "Charles-Henri SAINT-MARS",
 };
 
 export default function RootLayout({ children }) {
